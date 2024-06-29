@@ -48,4 +48,23 @@
         color: #1B1A17;
         margin-bottom: 20px;
       }
+      .partner-image img {
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 4px 6px rgba(216, 92, 21, 0.834);
+        clip-path: polygon(35% 0, 100% 30%, 100% 70%, 35% 100%, 0 75%, 0 25%);
+        object-fit: cover;
+        border-radius: 15px;
+      }
+      .about-heading h1 {
+        font-family: var(--Montserrat-family);
+        font-size: 30px;
+        font-weight: var(--bold-weight);
+        text-align: left;
+        margin-bottom: 2rem;
+        color: #1B1A17;
+        border-bottom: 10px solid #f05a24;
+        width: 300px;
+        padding-left: 100px;
+      }
 }

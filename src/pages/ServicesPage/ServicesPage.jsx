@@ -8,7 +8,7 @@ import bank from '../../assets/images/service6.png'
 const ServicesPage = () => {
   return (
     <div className="services" id="services">
-      <div className="services-head">
+      <div className="about-heading">
         <h1> Our Services</h1>
       </div>
       <div className="services-content ">

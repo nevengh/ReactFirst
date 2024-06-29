@@ -1,8 +1,36 @@
+import { useRef } from "react";
 import "./Contact.css";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_1n0hcmo",
+        "template_0gmroi6",
+        form.current,
+        "Dhw_22hh8etdn_F7B"
+      )
+      .then(
+        (response) => {
+          console.log(response);
+          alert("Email sent successfully");
+          // Clear the form fields
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error);
+          alert("Something went wrong");
+        }
+      );
+  };
+
   const map =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14369.461218900944!2d55.94033380294823!3d25.791519735772464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef676caf1a11b73%3A0xba7f4e8e25ac41aa!2sJulphar%20Towers%20-%20Al%20Hisn%20Rd%20-%20Dafan%20Al%20Nakheel%20-%20Ras%20al%20Khaimah!5e0!3m2!1sen!2sae!4v1717334620581!5m2!1sen!2sae";
+
   return (
     <div className="contact" id="contact">
       <div className="about-heading">
@@ -10,12 +38,13 @@ const Contact = () => {
       </div>
       <div className="contact_container">
         <div className="contact-form">
-          <h1>Ras Al Khaimah - Dafan Al Nakheel - Julphar Tower - Office No 2605</h1>
-          <form>
-
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email Address" />
-            <input type="tel" placeholder="Phone Number" />
+          <h1>
+            Ras Al Khaimah - Dafan Al Nakheel - Julphar Tower - Office No 2605
+          </h1>
+          <form ref={form} onSubmit={sendEmail}>
+            <input type="text" placeholder="Name" name="user_name" />
+            <input type="email" placeholder="Email Address" name="email" />
+            <input type="tel" placeholder="Phone Number" name="phone" />
             <button type="submit">APPLY HERE</button>
           </form>
         </div>

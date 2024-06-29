@@ -3,10 +3,10 @@ import "./Slider.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import slide_01 from '../../assets/images/slider1.png'
-import slide_02 from '../../assets/images/slider3.png'
-import slide_04 from '../../assets/images/slider4.png'
-import slide_05 from '../../assets/images/slider5.png'
+import slide_01 from '../../assets/images/slider1.webp'
+import slide_02 from '../../assets/images/slider3.webp'
+import slide_04 from '../../assets/images/slider4.webp'
+import slide_05 from '../../assets/images/slider5.webp'
 const SliderComponent = () => {
   const settings = {
     dots: true,
@@ -36,7 +36,7 @@ const SliderComponent = () => {
           <div className="form-container">
             <h1> <span>APPLY</span> FOR YOUR DREAM Car</h1>
             <form>
-              <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Name"  />
               <input type="email" placeholder="Email Address" />
               <input type="tel" placeholder="Phone Number" />
               <button type="submit">APPLY HERE</button>

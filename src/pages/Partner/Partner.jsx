@@ -1,5 +1,5 @@
 import "./Partner.css";
-import hands from "../../assets/images/partner.jpg";
+import hands from "../../assets/images/partner.webp";
 const Partner = () => {
   return (
     <div className="partner" id="partner">

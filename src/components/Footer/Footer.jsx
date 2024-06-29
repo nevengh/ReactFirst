@@ -2,9 +2,6 @@
 import "./Footer.css";
 // import facebook from "../../assets/images/facebook.svg";
 import instagram from "../../assets/images/instagram.svg";
-// import { FaFacebook } from "react-icons/fa";
-// import { FaInstagram } from "react-icons/fa";
-// import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <div className="footer">
@@ -61,9 +58,7 @@ const Footer = () => {
             <a href="">
               <img src={instagram} alt="" />
             </a>
-            {/* <FaFacebook />
-            <FaInstagram />
-            <FaXTwitter /> */}
+            
           </div>
         </div>
       </div>

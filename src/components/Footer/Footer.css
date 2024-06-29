@@ -1,0 +1,133 @@
+.footer{
+    background-color: #1b1b1b;
+    margin-top: 90px;
+}
+.footer-container{
+    
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-bottom: 1px solid #f05a24;
+}
+.footer-container .logo h1{
+    color: #fff;
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    border-left: 2px solid #f05a24;
+    border-right: 2px solid #f05a24;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.footer-links a{
+    color: #fff;
+    text-decoration: none;
+    font-family: var( --Montserrat-family);
+    font-size: 20px;
+    transition: .3s
+}
+
+.footer-links a:hover{
+    padding-bottom: 10px;
+    border-bottom:2px solid #f05a24;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 40px;
+}
+.social .address{
+
+    font-family: var(--Montserrat-family);
+    font-size: 18px;
+    width: 80%;
+    color: #fff;
+
+}
+.social-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.social-icon svg{
+    color: #f05a24;
+    font-size: 35px;
+    cursor: pointer;
+    transition: .3s;
+}
+.social-icon svg:hover{
+    color:#d4420d ;
+}
+.copywriter{
+    padding: 1rem;
+}
+.copywriter p{
+    text-align: center;
+    font-family: var(--Montserrat-family);
+    font-size: 16px;
+    color: #fff;
+}
+/* 
+=======================
+        newsletter
+====================
+*/
+.newsletter h1{
+    color:#fff;
+    font-family: var(--Montserrat-family);
+    font-weight: bold;
+    font-size: 40px;
+    /* background-color: #f05a24;
+    padding: 0.5rem; */
+}
+
+.input-group {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .newsletter .input {
+    min-height: 70px;
+    width: 100%;
+    padding: 0 1rem;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #f05a24;
+    border-radius: 6px 0 0 6px;
+    background-color: transparent;
+  }
+  
+  .newsletter .button--submit {
+    min-height: 70px;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    background-color: #f05a24;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+  }
+  
+  .newsletter .button--submit:hover {
+    background-color: #f05a24;
+  }
+  
+  .input:focus, .input:focus-visible {
+    border-color: #f05a24;
+    outline: none;
+  }
+  
+

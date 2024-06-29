@@ -1,4 +1,4 @@
-import about_img from "../../assets/images/david-rodrigo-Fr6zexbmjmc-unsplash.jpg";
+import about_img from "../../assets/images/david-rodrigo-Fr6zexbmjmc-unsplash.webp";
 import "./AboutUs.css";
 const AboutUs = () => {
   return (

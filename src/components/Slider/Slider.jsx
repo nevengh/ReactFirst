@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import slide_01 from '../../assets/images/slider1.png'
 import slide_02 from '../../assets/images/slider3.png'
-import slide_03 from '../../assets/images/slider2.png'
 import slide_04 from '../../assets/images/slider4.png'
 import slide_05 from '../../assets/images/slider5.png'
 const SliderComponent = () => {

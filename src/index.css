@@ -7,11 +7,19 @@
 /* body{
   background-color: #ccc;
 } */
-
+html{
+  font-family: var(--Montserrat-family);
+}
 :root{
   --Montserrat-family: "Montserrat", sans-serif;
   --bold-weight: 700;
   --normal-weight: 400;
+
+  /* Color */
+  --primary-color:#182933;
+  --dark-blue:#294b5f;
+  --secondary-color:#fce3a1;
+  --dark-yellow:#e6cd89;
 }
 
 

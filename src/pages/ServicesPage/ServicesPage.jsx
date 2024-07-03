@@ -1,10 +1,7 @@
 import "./ServicesPage.css";
-import home from '../../assets/images/service1.png'
-import money from '../../assets/images/service2.png'
-import car from '../../assets/images/service3.png'
-import card from '../../assets/images/service4.png'
-import business from '../../assets/images/service5.png'
-import bank from '../../assets/images/service6.png'
+import home from "../../assets/images/mortgage-svgrepo-com.svg";
+import business from "../../assets/images/dollar-finance-money-20-svgrepo-com.svg";
+import mobile from "../../assets/images/mobile-dollar-svgrepo-com.svg";
 const ServicesPage = () => {
   return (
     <div className="services" id="services">
@@ -12,7 +9,7 @@ const ServicesPage = () => {
         <h1> Our Services</h1>
       </div>
       <div className="services-content ">
-        <div className="card">
+        {/* <div className="card">
             <img src={home} alt="" />
             <h1>HOME FINANCE</h1>
         </div>
@@ -35,6 +32,39 @@ const ServicesPage = () => {
         <div className="card">
             <img src={business} alt="" />
             <h1>BUSINESS LOANS</h1>
+        </div> */}
+        <div className="card-container">
+          <div className="card">
+            <div className="front-content">
+              <img src={business} alt="" />
+            </div>
+            <div className="content">
+              {/* <p className="heading">Card Hover</p> */}
+              <p>PERSONAL LOANS</p>
+            </div>
+          </div>
+        </div>
+        <div className="card-container">
+          <div className="card">
+            <div className="front-content">
+              <img src={mobile} alt="" />
+            </div>
+            <div className="content">
+              {/* <p className="heading">Card Hover</p> */}
+              <p>AUTOMOBILE LOANS</p>
+            </div>
+          </div>
+        </div>
+        <div className="card-container">
+          <div className="card">
+            <div className="front-content">
+              <img src={home} alt="" />
+            </div>
+            <div className="content">
+              {/* <p className="heading">Card Hover</p> */}
+              <p>HOME FINANCE</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

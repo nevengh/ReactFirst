@@ -9,8 +9,8 @@
     font-weight: var(--bold-weight);
     text-align: left;
     margin-bottom: 2rem;
-    color: #1B1A17;
-    border-bottom:10px solid #f05a24 ;
+    color: var(--dark-blue);
+    border-bottom:10px solid var(--dark-yellow) ;
     width: 450px;
     padding-left: 150px;
 }
@@ -29,18 +29,18 @@
     font-weight: var(--normal-weight);
     width: 700px;
     line-height: 40px;
-    color: #1B1A17;
+    color: var(--dark-blue);
     margin-bottom: 20px;
 }
 .about-img {
-    filter: drop-shadow(0px 0px 15px #f05a24);
+    filter: drop-shadow(0px 0px 5px var(--dark-blue));
     
 }
 .about-content .about-img img{
     width: 600px;
     height: 100%;
     /* box-shadow: 0 4px 6px rgba(216, 92, 21, 0.834); */
-    clip-path: polygon(35% 0, 100% 30%, 100% 70%, 35% 100%, 0 75%, 0 25%);
+    clip-path: polygon(55% 0, 100% 30%, 100% 70%, 35% 100%, 0 75%, 0 25%);
     object-fit: cover;
     border-radius: 15px;
     
@@ -62,7 +62,7 @@
         font-weight: var(--normal-weight);
         width: 100%;
         line-height: 40px;
-        color: #1B1A17;
+        color: var(--dark-blue);
         margin-bottom: 20px;
       }
 }

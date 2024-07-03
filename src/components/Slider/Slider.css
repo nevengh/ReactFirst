@@ -1,5 +1,5 @@
 .slidercomponent{
-  background-color: #1B1A17;
+  background-color: var(--primary-color);
     
 }
 .slide-con{
@@ -43,7 +43,7 @@
     font-weight: bold;
   }
   .form-container h1 span {
-    color:#f05a24 ;
+    color:var(--secondary-color) ;
   }
 
   
@@ -55,23 +55,28 @@
   
   .form-container input {
     padding: 1rem;
-    border: 1px solid #063f50;
+    border: 1px solid var(--primary-color);
     border-radius: 15px;
     font-size: 1rem;
+    color: var(--primary-color);
   }
   
   .form-container button {
     padding: 1rem;
-    background-color: #f05a24;
-    color: white;
+    background-color: var(--dark-yellow);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.493);
+    color: var(--primary-color);
     border: none;
+    font-weight: var(--bold-weight);
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+    transition: .3s;
   }
   
   .form-container button:hover {
-    background-color: #d34815;
+    background-color: var(--dark-blue);
+    color: var(--dark-yellow);
   }
 
 
@@ -79,5 +84,10 @@
     .form-container {
       width: 100%;
       padding: 2rem;
+    }
+    .slide-con .slide-img img {
+      display: block;
+      width: 350px;
+      height: auto;
     }
   }

@@ -7,6 +7,7 @@ import ServicesPage from './pages/ServicesPage/ServicesPage'
 import Partner from './pages/Partner/Partner'
 import Contact from './pages/Contact/ContactUs'
 import Footer from './components/Footer/Footer'
+import LoanCalc from './components/LoanCalc/LoanCalc'
 function App() {
  
 
@@ -16,6 +17,7 @@ function App() {
       <Slider/>
       <AboutUs/>
       <ServicesPage/>
+      <LoanCalc/>
       <Partner/>
       <Contact/>
       <Footer/>

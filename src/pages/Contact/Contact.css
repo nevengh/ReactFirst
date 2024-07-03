@@ -2,7 +2,7 @@
 .map-container iframe{
     /* clip-path: polygon(35% 0, 100% 30%, 100% 70%, 55% 100%, 0 75%, 0 25%); */
     border-radius: 30px;
-    filter: drop-shadow(0px 0px 10px #f05a24);
+    filter: drop-shadow(0px 0px 5px var(--dark-blue));
 
 }
 
@@ -26,7 +26,7 @@
     width: 50%;
     padding: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.493);
-    background-color: #1b1b1b;
+    background-color: var(--dark-blue);
 }
 .contact-form h1{
     font-family: var(--Montserrat-family);
@@ -41,7 +41,7 @@
   
   .contact-form input {
     padding: 1rem;
-    border: 1px solid #1b1b1b;
+    border: 1px solid var(--dark-blue);
     border-radius: 30px;
     font-size: 1rem;
     font-family: var(--Montserrat-family);
@@ -49,8 +49,9 @@
   
   .contact-form button {
     padding: 1rem;
-    background-color: #f05a24;
-    color: white;
+    background-color: var(--dark-yellow);
+    color: var(--dark-blue);
+    font-weight: var(--bold-weight);
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -60,7 +61,8 @@
   }
   
   .contact-form button:hover {
-    background-color: #d34815;
+    background-color: #c5ac68;
+    color: var(--dark-blue);
   }
 
 
@@ -74,5 +76,12 @@
       .map-container iframe{
         width: 400px;
     
+    }
+  }
+  @media (max-width:420px){
+    
+      .map-container iframe{
+        width: 350px;
+        
     }
   }

@@ -1,5 +1,5 @@
 .footer{
-    background-color: #1b1b1b;
+    background-color: var(--dark-blue);
     margin-top: 90px;
 }
 .footer-container{
@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
-    border-bottom: 1px solid #f05a24;
+    border-bottom: 2px solid var(--dark-yellow);
 }
 .footer-container .logo h1{
     color: #fff;
@@ -21,8 +21,8 @@
     justify-content: center;
     align-items: center;
     gap:20px;
-    border-left: 2px solid #f05a24;
-    border-right: 2px solid #f05a24;
+    border-left: 2px solid var(--dark-yellow);
+    border-right: 2px solid var(--dark-yellow);
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -105,7 +105,7 @@
     padding: 0 1rem;
     color: #fff;
     font-size: 15px;
-    border: 1px solid #f05a24;
+    border: 1px solid var(--dark-yellow);
     border-radius: 6px 0 0 6px;
     background-color: transparent;
   }
@@ -115,8 +115,8 @@
     padding: .5em 1em;
     border: none;
     border-radius: 0 6px 6px 0;
-    background-color: #f05a24;
-    color: #fff;
+    background-color: var(--dark-yellow);
+    color: var(--dark-blue);
     font-size: 15px;
     cursor: pointer;
     transition: background-color .3s ease-in-out;

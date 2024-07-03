@@ -1,13 +1,16 @@
 import "./Slider.css";
-// import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import slide_01 from '../../assets/images/slider1.webp'
-import slide_02 from '../../assets/images/slider3.webp'
-import slide_04 from '../../assets/images/slider4.webp'
-import slide_05 from '../../assets/images/slider5.webp'
+
+
+import slide_01 from '../../assets/images/slider1.webp';
+import slide_02 from '../../assets/images/slider3.webp';
+import slide_04 from '../../assets/images/slider4.webp';
+import slide_05 from '../../assets/images/slider5.webp';
+
 const SliderComponent = () => {
+
   const settings = {
     dots: true,
     infinite: true,
@@ -15,85 +18,35 @@ const SliderComponent = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
-    <div className="slidercomponent  " id="home">
+    <div className="slidercomponent" id="home">
       <Slider {...settings}>
-        <div className="slide-con">
-          <div className="form-container">
-            <h1> <span>APPLY</span> FOR YOUR DREAM HOME</h1>
-            <form>
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email Address" />
-              <input type="tel" placeholder="Phone Number" />
-              <button type="submit">APPLY HERE</button>
-            </form>
+        {[
+          { title: 'HOME', img: slide_01 },
+          { title: 'Car', img: slide_02 },
+          { title: 'LifeStyle', img: slide_01 },
+          { title: 'PARTNERSHIP', img: slide_04 },
+          { title: 'BUSINESS', img: slide_05 }
+        ].map((slide, index) => (
+          <div className="slide-con" key={index}>
+            <div className="form-container">
+              <h1> <span>APPLY</span> FOR YOUR DREAM {slide.title}</h1>
+              <form >
+                <input type="text" name="name" placeholder="Name"  required />
+                <input type="email" name="email" placeholder="Email Address"  required />
+                <input type="tel" name="phone" placeholder="Phone Number"  required />
+                <button type="submit">APPLY HERE</button>
+              </form>
+            </div>
+            <div className="slide-img">
+              <img src={slide.img} alt="" />
+            </div>
           </div>
-          <div className="slide-img">
-            <img src={slide_01} alt="" />
-          </div>
-        </div>
-        <div className="slide-con">
-          <div className="form-container">
-            <h1> <span>APPLY</span> FOR YOUR DREAM Car</h1>
-            <form>
-              <input type="text" placeholder="Name"  />
-              <input type="email" placeholder="Email Address" />
-              <input type="tel" placeholder="Phone Number" />
-              <button type="submit">APPLY HERE</button>
-            </form>
-          </div>
-          <div className="slide-img">
-            <img src={slide_02} alt="" />
-          </div>
-        </div>
-        <div className="slide-con">
-          <div className="form-container">
-            <h1> <span>APPLY</span> FOR YOUR DREAM LifeStyle</h1>
-            <form>
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email Address" />
-              <input type="tel" placeholder="Phone Number" />
-              <button type="submit">APPLY HERE</button>
-            </form>
-          </div>
-          <div className="slide-img">
-            <img src={slide_01} alt="" />
-          </div>
-        </div>
-        <div className="slide-con">
-          <div className="form-container">
-            <h1> <span>APPLY</span> FOR YOUR DREAM PARTNERSHIP</h1>
-            <form>
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email Address" />
-              <input type="tel" placeholder="Phone Number" />
-              <button type="submit">APPLY HERE</button>
-            </form>
-          </div>
-          <div className="slide-img">
-            <img src={slide_04} alt="" />
-          </div>
-        </div>
-        <div className="slide-con">
-          <div className="form-container">
-            <h1> <span>APPLY</span> FOR YOUR DREAM BUSINESS</h1>
-            <form>
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email Address" />
-              <input type="tel" placeholder="Phone Number" />
-              <button type="submit">APPLY HERE</button>
-            </form>
-          </div>
-          <div className="slide-img">
-            <img src={slide_05} alt="" />
-          </div>
-        </div>
+        ))}
       </Slider>
     </div>
   );
 };
 
 export default SliderComponent;
-
-
-// service_wh6bij9

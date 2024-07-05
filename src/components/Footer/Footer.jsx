@@ -3,6 +3,9 @@
 import "./Footer.css";
 import logo from '../../assets/images/Alhosn svg.svg'
 import translations from '../../translations.json';
+import location from '../../assets/images/icons8-location-24.png'
+import phone from '../../assets/images/icons8-phone-24.png'
+import mail from '../../assets/images/icons8-envelope-24.png'
 const Footer = ({language}) => {
   return (
     <div className="footer">
@@ -38,9 +41,17 @@ const Footer = ({language}) => {
               />
             </div>
           </div>
-          <h1 className="address">
-            {translations[language].contact_heading_h1}
-          </h1>
+          <div className="info">
+            <p className="address">
+              <span><img src={location} alt="" /> </span>{translations[language].contact_heading_h1}
+            </p>
+            <p className="address">
+              <span><img src={phone} alt="" /> </span>+0509347099
+            </p>
+            <p className="address">
+              <span><img src={location} alt="" /> </span>info@alhosnfb.com 
+            </p>
+          </div>
           <div className="social-icon">
             <a href="https://www.facebook.com/profile.php?id=61561586488358">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" fill="#e6cd89" width="100" height="100" viewBox="0 0 24 24">

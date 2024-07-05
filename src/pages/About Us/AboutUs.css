@@ -17,7 +17,7 @@
 
 .about-content{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     gap: 4rem;
@@ -37,10 +37,10 @@
     
 }
 .about-content .about-img img{
-    width: 600px;
-    height: 100%;
+    width: 400px;
+    height: 400px;
     /* box-shadow: 0 4px 6px rgba(216, 92, 21, 0.834); */
-    clip-path: polygon(55% 0, 100% 30%, 100% 70%, 35% 100%, 0 75%, 0 25%);
+    /* clip-path: polygon(55% 0, 100% 30%, 100% 70%, 35% 100%, 0 75%, 0 25%); */
     object-fit: cover;
     border-radius: 15px;
     
@@ -52,7 +52,7 @@
         width: 100%;
         height: 100%;
         box-shadow: 0 4px 6px rgba(216, 92, 21, 0.834);
-        clip-path: polygon(35% 0, 100% 30%, 100% 70%, 35% 100%, 0 75%, 0 25%);
+        /* clip-path: polygon(35% 0, 100% 30%, 100% 70%, 35% 100%, 0 75%, 0 25%); */
         object-fit: cover;
         border-radius: 15px;
       }

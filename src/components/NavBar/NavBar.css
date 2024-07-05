@@ -1,7 +1,8 @@
 /* src/Navbar.css */
 .navbar {
-    position: fixed;
-    z-index: 99;
+  position: sticky;
+  top: 0;
+  z-index: 99;
     
     width: 100%;
     display: flex;
@@ -14,9 +15,27 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.493);
   }
   
-  .navbar-logo {
-    font-size: 1.5rem;
+
+ 
+  .navbar-logo img{
+    width: 150px;
   }
+  .navbar-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar-logo p span{
+    color: var(--dark-yellow);
+    font-weight: bold;
+  }
+  .navbar-logo p {
+    font-size: 20px;
+    margin-left: -40px;
+    width: 140px;
+    
+  }
+
   
   .navbar-toggle {
     display: none;
@@ -39,8 +58,15 @@
     transition: .3s
   }
   .navbar-links a:hover{
-    padding-bottom: 10px;
     border-bottom:2px solid var(--secondary-color);
+  }
+  .language-selector select{
+    border: none;
+    background-color: var(--primary-color);
+    font-family: var(--Montserrat-family);
+    color: var(--dark-yellow);
+    
+    font-size: 20px;
   }
   
   @media (max-width: 768px) {

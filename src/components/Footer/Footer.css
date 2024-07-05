@@ -12,8 +12,13 @@
     gap: 40px;
     border-bottom: 2px solid var(--dark-yellow);
 }
-.footer-container .logo h1{
+.footer-container .logo p{
     color: #fff;
+    font-size: 20px;
+    margin-top: -30px;
+}
+.footer .logo p  span{
+    color: var(--dark-yellow);
 }
 .footer-links{
     display: flex;
@@ -62,13 +67,17 @@
     gap: 40px;
 }
 .social-icon svg{
-    color: #f05a24;
-    font-size: 35px;
     cursor: pointer;
-    transition: .3s;
+    width: 45px;
 }
-.social-icon svg:hover{
-    color:#d4420d ;
+.footer .logo img{
+    width: 150px;
+}
+.footer .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .copywriter{
     padding: 1rem;
@@ -89,8 +98,7 @@
     font-family: var(--Montserrat-family);
     font-weight: bold;
     font-size: 40px;
-    /* background-color: #f05a24;
-    padding: 0.5rem; */
+   
 }
 
 .input-group {

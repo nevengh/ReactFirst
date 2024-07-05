@@ -8,20 +8,27 @@ import Partner from './pages/Partner/Partner'
 import Contact from './pages/Contact/ContactUs'
 import Footer from './components/Footer/Footer'
 import LoanCalc from './components/LoanCalc/LoanCalc'
+import { useEffect, useState } from 'react'
 function App() {
- 
+  const [language, setLanguage] = useState('en');
+// Determine text direction based on language
+const direction = language === 'ar' ? 'rtl' : 'ltr';
 
+// Update body class for direction
+useEffect(() => {
+  document.body.dir = direction;
+}, [direction]);
   return (
-    <>
-      <Navbar/>
-      <Slider/>
-      <AboutUs/>
-      <ServicesPage/>
-      <LoanCalc/>
-      <Partner/>
-      <Contact/>
-      <Footer/>
-    </>
+    <div className={`app ${direction}`}>
+      <Navbar language={language} setLanguage={setLanguage} />
+      <Slider language={language}/>
+      <AboutUs language={language}/>
+      <ServicesPage language={language}/>
+      <LoanCalc language={language}/>
+      <Partner language={language}/>
+      <Contact language={language}/>
+      <Footer language={language}/>
+    </div>
   )
 }
 

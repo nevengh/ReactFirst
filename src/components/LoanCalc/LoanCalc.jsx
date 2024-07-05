@@ -1,11 +1,14 @@
+/* eslint-disable react/prop-types */
+
 import "./LoanCalc.css";
 import Home from "../../assets/images/mortgage-svgrepo-com.svg";
 import Money from "../../assets/images//dollar-finance-money-20-svgrepo-com.svg";
 import Car from "../../assets/images/mobile-dollar-svgrepo-com.svg";
 import Select from 'react-select';
 import { useState } from "react";
+import translations from '../../translations.json';
 
-const LoanCalc = () => {
+const LoanCalc = ({language }) => {
   const [propertyValue, setPropertyValue] = useState(0);
   const [financeAmount, setFinanceAmount] = useState(0);
   const [tenor, setTenor] = useState(25);
@@ -78,10 +81,10 @@ const LoanCalc = () => {
       case 'home':
         return (
           <>
-            <h2 className="left_title">Estimate your mortgage</h2>
+            <h2 className="left_title">{translations[language].estimateYourMortgage}</h2>
             <form action="">
               <div className="input_group">
-                <label htmlFor="property_value">Property Value</label>
+                <label htmlFor="property_value">{translations[language].propertyValue}</label>
                 <input type="text" id="property_value"
                   value={propertyValue}
                   onChange={handlePropertyValueChange}
@@ -89,7 +92,7 @@ const LoanCalc = () => {
                 />
               </div>
               <div className="input_group">
-                <label htmlFor="Finance">Finance Amount</label>
+                <label htmlFor="Finance">{translations[language].financeAmount}</label>
                 <input type="text" id="Finance"
                   value={financeAmount}
                   onChange={handleFinanceAmountChange}
@@ -97,7 +100,7 @@ const LoanCalc = () => {
                 />
               </div>
               <div className="input_group">
-                <label htmlFor="Tenor">Tenor In Years</label>
+                <label htmlFor="Tenor">{translations[language].tenorInYears}</label>
                 <Select
                   options={tenors}
                   defaultValue={tenors.find(option => option.value === 25)}
@@ -106,10 +109,10 @@ const LoanCalc = () => {
               </div>
             </form>
             <button className="estimate-button" onClick={calculateResults}>
-              ESTIMATE MY MORTGAGE
+              {translations[language].estimateMortgage}
             </button>
             <h3 className="left_text">
-              Unlock the door to your dream home with our tailored mortgage loan solutions. We're here to make your home ownership journey seamless and rewarding. Trust in our expertise and personalized service as we guide you towards the key to your future. Please note, rates may fluctuate depending on the specific bank and its policies. Terms and conditions apply.
+             {translations[language].unlockMortgage}
             </h3>
           </>
         );
@@ -117,10 +120,10 @@ const LoanCalc = () => {
       case 'personal':
         return (
           <>
-            <h2 className="left_title">Estimate your personal loan</h2>
+            <h2 className="left_title">{translations[language].estimateYourPersonal}</h2>
             <form action="">
               <div className="input_group">
-                <label htmlFor="Finance">Finance Amount</label>
+                <label htmlFor="Finance">{translations[language].financeAmount}</label>
                 <input type="text" id="Finance"
                   value={financeAmount}
                   onChange={handleFinanceAmountChange}
@@ -128,7 +131,7 @@ const LoanCalc = () => {
                 />
               </div>
               <div className="input_group">
-                <label htmlFor="Tenor">Tenor In Years</label>
+                <label htmlFor="Tenor">{translations[language].tenorInYears}</label>
                 <Select
                   options={tenors}
                   defaultValue={tenors.find(option => option.value === 25)}
@@ -137,10 +140,10 @@ const LoanCalc = () => {
               </div>
             </form>
             <button className="estimate-button" onClick={calculateResults}>
-              ESTIMATE MY LOAN
+              {translations[language].estimateLoan}
             </button>
             <h3 className="left_text">
-              Unlock the door to your dream with our tailored personal loan solutions. We're here to make your journey seamless and rewarding. Trust in our expertise and personalized service as we guide you towards the key to your future. Please note, rates may fluctuate depending on the specific bank and its policies. Terms and conditions apply.
+            {translations[language].unlockMortgage}
             </h3>
           </>
         );
@@ -148,10 +151,10 @@ const LoanCalc = () => {
       case 'automobile':
         return (
           <>
-            <h2 className="left_title">Estimate your automobile loan</h2>
+            <h2 className="left_title">{translations[language].estimateYourAutomobile}</h2>
             <form action="">
               <div className="input_group">
-                <label htmlFor="Finance">Finance Amount</label>
+                <label htmlFor="Finance">{translations[language].financeAmount}</label>
                 <input type="text" id="Finance"
                   value={financeAmount}
                   onChange={handleFinanceAmountChange}
@@ -159,7 +162,7 @@ const LoanCalc = () => {
                 />
               </div>
               <div className="input_group">
-                <label htmlFor="Tenor">Tenor In Years</label>
+                <label htmlFor="Tenor">{translations[language].tenorInYears}</label>
                 <Select
                   options={tenors}
                   defaultValue={tenors.find(option => option.value === 25)}
@@ -168,10 +171,10 @@ const LoanCalc = () => {
               </div>
             </form>
             <button className="estimate-button" onClick={calculateResults}>
-              ESTIMATE MY LOAN
+            {translations[language].estimateLoan}
             </button>
             <h3 className="left_text">
-              Unlock the door to your dream car with our tailored automobile loan solutions. We're here to make your journey seamless and rewarding. Trust in our expertise and personalized service as we guide you towards the key to your future. Please note, rates may fluctuate depending on the specific bank and its policies. Terms and conditions apply.
+            {translations[language].unlockMortgage}
             </h3>
           </>
         );
@@ -183,7 +186,7 @@ const LoanCalc = () => {
 
   return (
     <div className="LoanCalc">
-      <h1>LOAN CALCULATOR</h1>
+      <h1>{translations[language].loanCalculator}</h1>
       <div className="LoanCalc-container main-container">
         <div className="LoanCalc_links_box">
           <div className="LoanCalc_links">
@@ -191,19 +194,19 @@ const LoanCalc = () => {
               <span>
                 <img src={Home} alt="Home Finance" />
               </span>
-              HOME FINANCE
+              {translations[language].homeFinance}
             </a>
             <a href="#" onClick={() => setSelectedLoanType('personal')}>
               <span>
                 <img src={Money} alt="Personal Loan" />
               </span>
-              PERSONAL LOAN
+              {translations[language].personalLoan}
             </a>
             <a href="#" onClick={() => setSelectedLoanType('automobile')}>
               <span>
                 <img src={Car} alt="Automobile Loan" />
               </span>
-              AUTOMOBILE LOANS
+              {translations[language].automobileLoans}
             </a>
           </div>
         </div>
@@ -212,17 +215,19 @@ const LoanCalc = () => {
             {renderLoanCalcContent()}
           </div>
           <div className="LoanCalc_content_box-right">
-            <p className="result">Result :</p>
+            <p className="result">{translations[language].result} :</p>
             <ul className="first_ul">
-              <li>Down Payment<span>AED {results.downPayment}</span></li>
-              <li>Number of Payments <span>{results.numberOfPayments}</span> </li>
-              <li>Monthly payment <span>AED {results.monthlyPayment}</span></li>
+              <li>{translations[language].downPayment}<span>{translations[language].Aed} {results.downPayment}</span></li>
+              <li>{translations[language].numberOfPayments} <span>{results.numberOfPayments}</span> </li>
+              <li>{translations[language].monthlyPayment} <span>{translations[language].Aed} {results.monthlyPayment}</span></li>
             </ul>
             <ul className="second_ul">
-              <li>Finance Amount <span>AED {results.financeAmount}</span></li>
-              <li>Tenor In Years <span>{results.tenor}</span> </li>
+              <li>{translations[language].financeAmount} <span>{translations[language].Aed} {results.financeAmount}</span></li>
+              <li>{translations[language].tenorInYears} <span>{results.tenor}</span> </li>
             </ul>
-            <button className="apply-button">APPLY HERE</button>
+            <a href="#contact">
+            <button className="apply-button">{translations[language].applyHere}</button>
+            </a>
           </div>
         </div>
       </div>

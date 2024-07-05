@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
 import { useRef } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
+import translations from '../../translations.json';
 
-const Contact = () => {
+const Contact = ({language}) => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -34,18 +36,18 @@ const Contact = () => {
   return (
     <div className="contact" id="contact">
       <div className="about-heading">
-        <h1>CONTACT US</h1>
+        <h1>{translations[language].contactUs}</h1>
       </div>
       <div className="contact_container">
         <div className="contact-form">
           <h1>
-            Ras Al Khaimah - Dafan Al Nakheel - Julphar Tower - Office No 2605
+            {translations[language].contact_heading_h1}
           </h1>
           <form ref={form} onSubmit={sendEmail}>
-            <input type="text" placeholder="Name" name="user_name" />
-            <input type="email" placeholder="Email Address" name="email" />
-            <input type="tel" placeholder="Phone Number" name="phone" />
-            <button type="submit">APPLY HERE</button>
+            <input type="text" placeholder={translations[language].name} name="user_name" />
+            <input type="email" placeholder={translations[language].Email} name="email" />
+            <input type="tel" placeholder={translations[language].PhoneNumber} name="phone" />
+            <button type="submit">{translations[language].applyHere}</button>
           </form>
         </div>
         <div className="map-container">

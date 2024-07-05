@@ -34,3 +34,12 @@
         max-width: 80%;
     }
   }
+
+  .app.ltr {
+    direction: ltr;
+  }
+  
+  .app.rtl {
+    direction: rtl;
+    text-align: right;
+  }

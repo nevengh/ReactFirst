@@ -1,6 +1,6 @@
 .slidercomponent{
-  background-color: var(--primary-color);
-    
+  background-color: var(--dark-blue);
+
 }
 .slide-con{
     display: flex !important;

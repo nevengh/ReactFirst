@@ -1,15 +1,16 @@
+/* eslint-disable react/prop-types */
 import "./Slider.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import translations from '../../translations.json';
+
+import slide_01 from '../../assets/images/silder1.png';
+import slide_02 from '../../assets/images/slider3 (2).webp';
+import slide_03 from '../../assets/images/slider2.webp';
 
 
-import slide_01 from '../../assets/images/slider1.webp';
-import slide_02 from '../../assets/images/slider3.webp';
-import slide_04 from '../../assets/images/slider4.webp';
-import slide_05 from '../../assets/images/slider5.webp';
-
-const SliderComponent = () => {
+const SliderComponent = ({language}) => {
 
   const settings = {
     dots: true,
@@ -23,24 +24,24 @@ const SliderComponent = () => {
     <div className="slidercomponent" id="home">
       <Slider {...settings}>
         {[
-          { title: 'HOME', img: slide_01 },
-          { title: 'Car', img: slide_02 },
-          { title: 'LifeStyle', img: slide_01 },
-          { title: 'PARTNERSHIP', img: slide_04 },
-          { title: 'BUSINESS', img: slide_05 }
+          { title: translations[language].home_slider, img: slide_01 },
+          { title: translations[language].car, img: slide_02 },
+          { title: translations[language].LifeStyle, img: slide_03 },
+          // { title: 'PARTNERSHIP', img: slide_04 },
+          // { title: 'BUSINESS', img: slide_05 }
         ].map((slide, index) => (
           <div className="slide-con" key={index}>
             <div className="form-container">
-              <h1> <span>APPLY</span> FOR YOUR DREAM {slide.title}</h1>
+              <h1> <span>{translations[language].slider_heading_span}</span>{translations[language].slider_heading_h1}  {slide.title}</h1>
               <form >
-                <input type="text" name="name" placeholder="Name"  required />
-                <input type="email" name="email" placeholder="Email Address"  required />
-                <input type="tel" name="phone" placeholder="Phone Number"  required />
-                <button type="submit">APPLY HERE</button>
+                <input type="text" name={translations[language].name} placeholder="Name"  required />
+                <input type="email" name={translations[language].Email} placeholder="Email Address"  required />
+                <input type="tel" name={translations[language].PhoneNumber} placeholder="Phone Number"  required />
+                <button  type="submit">{translations[language].applyHere}</button>
               </form>
             </div>
             <div className="slide-img">
-              <img src={slide.img} alt="" />
+              <img src={slide.img} alt={translations[language].sliderImg} />
             </div>
           </div>
         ))}

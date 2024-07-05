@@ -50,8 +50,8 @@
         margin-bottom: 20px;
       }
       .partner-image img {
-        width: 370px;
-        height: 370px;
+        width: 350px;
+        height: 350px;
         box-shadow: 0 4px 6px rgba(216, 92, 21, 0.834);
         /* clip-path: polygon(35% 0, 100% 30%, 100% 70%, 35% 100%, 0 75%, 0 25%); */
         object-fit: cover;

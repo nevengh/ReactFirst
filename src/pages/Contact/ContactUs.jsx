@@ -2,9 +2,10 @@
 import { useRef } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
-import translations from '../../translations.json';
+import translations from "../../translations.json";
+import { Helmet } from "react-helmet";
 
-const Contact = ({language}) => {
+const Contact = ({ language }) => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -35,18 +36,86 @@ const Contact = ({language}) => {
 
   return (
     <div className="contact" id="contact">
+      {/* 
+        ==================================
+                Helmet
+        ==================================
+      */}
+      <Helmet>
+        <title>
+          {translations[language].contactUs} | ALHOSN FINANCING BROKER
+        </title>
+        <meta
+          name="description"
+          content={`${translations[language].contact_heading_h1}. Get in touch with ALHOSN FINANCING BROKER for all your financial needs.`}
+        />
+        <meta
+          name="keywords"
+          content="contact, ALHOSN FINANCING BROKER, financial services, Ras al Khaimah"
+        />
+        <link rel="canonical" href="https://yourdomain.com/contact" />
+        <meta
+          property="og:title"
+          content={`${translations[language].contactUs} | ALHOSN FINANCING BROKER`}
+        />
+        <meta
+          property="og:description"
+          content={`${translations[language].contact_heading_h1}. Get in touch with ALHOSN FINANCING BROKER for all your financial needs.`}
+        />
+        <meta property="og:url" content="https://yourdomain.com/contact" />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "http://schema.org",
+              "@type": "ContactPage",
+              "name": "${translations[language].contactUs}",
+              "description": "${translations[language].contact_heading_h1}",
+              "url": "https://yourdomain.com/contact",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-234-567-8901",
+                "contactType": "customer support",
+                "areaServed": "AE",
+                "availableLanguage": ["en", "ar"]
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Julphar Towers - Al Hisn Rd - Dafan Al Nakheel",
+                "addressLocality": "Ras al Khaimah",
+                "addressCountry": "AE"
+              }
+            }
+          `}
+        </script>
+      </Helmet>
+      {/* 
+        ==================================
+                End Helmet
+        ==================================
+      */}
       <div className="about-heading">
         <h1>{translations[language].contactUs}</h1>
       </div>
       <div className="contact_container">
         <div className="contact-form">
-          <h1>
-            {translations[language].contact_heading_h1}
-          </h1>
+          <h1>{translations[language].contact_heading_h1}</h1>
           <form ref={form} onSubmit={sendEmail}>
-            <input type="text" placeholder={translations[language].name} name="user_name" />
-            <input type="email" placeholder={translations[language].Email} name="email" />
-            <input type="tel" placeholder={translations[language].PhoneNumber} name="phone" />
+            <input
+              type="text"
+              placeholder={translations[language].name}
+              name="user_name"
+            />
+            <input
+              type="email"
+              placeholder={translations[language].Email}
+              name="email"
+            />
+            <input
+              type="tel"
+              placeholder={translations[language].PhoneNumber}
+              name="phone"
+            />
             <button type="submit">{translations[language].applyHere}</button>
           </form>
         </div>

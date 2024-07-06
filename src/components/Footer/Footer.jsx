@@ -49,7 +49,7 @@ const Footer = ({language}) => {
               <span><img src={phone} alt="" /> </span>+0509347099
             </p>
             <p className="address">
-              <span><img src={location} alt="" /> </span>info@alhosnfb.com 
+              <span><img src={mail} alt="" /> </span>info@alhosnfb.com 
             </p>
           </div>
           <div className="social-icon">

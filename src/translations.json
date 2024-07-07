@@ -1,5 +1,7 @@
 {
     "en": {
+      "PageName":" Finance Broker",
+      "spanPageName":"ALHOSN",
       "loanCalculator": "LOAN CALCULATOR",
       "homeFinance": "HOME FINANCE",
       "personalLoan": "PERSONAL LOAN",
@@ -60,6 +62,8 @@
     
     },
     "ar": {
+      "PageName":" لوساطة التمويل",
+      "spanPageName":"الحصن",
       "loanCalculator": "حاسبة القروض",
       "homeFinance": "تمويل المنزل",
       "personalLoan": "القرض الشخصي",

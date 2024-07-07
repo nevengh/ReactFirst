@@ -7,7 +7,7 @@ import Car from "../../assets/images/mobile-dollar-svgrepo-com.svg";
 import Select from "react-select";
 import { useState } from "react";
 import translations from "../../translations.json";
-import { Helmet } from "react-helmet";
+
 
 const LoanCalc = ({ language }) => {
   const [propertyValue, setPropertyValue] = useState(0);
@@ -84,67 +84,7 @@ const LoanCalc = ({ language }) => {
       case "home":
         return (
           <>
-            {/* 
-        ==================================
-                Helmet
-        ==================================
-      */}
-            <Helmet>
-              <title>
-                {translations[language].loanCalculator} | ALHOSN FINANCING
-                BROKER
-              </title>
-              <meta
-                name="description"
-                content={`${translations[language].estimateYourMortgage}. ${translations[language].unlockMortgage}`}
-              />
-              <meta
-                name="keywords"
-                content="loan calculator, mortgage calculator, finance amount, property value, ALHOSN FINANCING BROKER"
-              />
-              <link
-                rel="canonical"
-                href="https://yourdomain.com/loan-calculator"
-              />
-              <meta
-                property="og:title"
-                content={`${translations[language].loanCalculator} | ALHOSN FINANCING BROKER`}
-              />
-              <meta
-                property="og:description"
-                content={`${translations[language].estimateYourMortgage}. ${translations[language].unlockMortgage}`}
-              />
-              <meta
-                property="og:url"
-                content="https://yourdomain.com/loan-calculator"
-              />
-              <meta property="og:type" content="website" />
-              <script type="application/ld+json">
-                {`
-            {
-              "@context": "http://schema.org",
-              "@type": "WebApplication",
-              "name": "${translations[language].loanCalculator}",
-              "description": "${translations[language].estimateYourMortgage}. ${translations[language].unlockMortgage}",
-              "applicationCategory": "FinanceApplication",
-              "operatingSystem": "Web",
-              "offers": {
-                "@type": "Offer",
-                "price": "0"
-              },
-              "provider": {
-                "@type": "Organization",
-                "name": "ALHOSN FINANCING BROKER"
-              }
-            }
-          `}
-              </script>
-            </Helmet>
-            {/* 
-        ==================================
-               end Helmet
-        ==================================
-      */}
+           
             <h2 className="left_title">
               {translations[language].estimateYourMortgage}
             </h2>

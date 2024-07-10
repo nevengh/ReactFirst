@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import "./Partner.css";
-import hands from "../../assets/images/partner.webp";
+import hands from "../../assets/images/amina-atar-4mEyvORkbN0-unsplash.webp";
 import translations from "../../translations.json";
 
 

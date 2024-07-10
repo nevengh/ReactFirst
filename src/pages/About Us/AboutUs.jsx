@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import about_img from "../../assets/images/david-rodrigo-Fr6zexbmjmc-unsplash.webp";
+import about_img from "../../assets/images/david-east-6psstU2DLKs-unsplash.webp";
 import "./AboutUs.css";
 import translations from '../../translations.json';
 const AboutUs = ({ language}) => {

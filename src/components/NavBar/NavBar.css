@@ -9,9 +9,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    background-color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0.905);
     color: white;
-    height: 100px;
+    height: 80px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.493);
   }
   
@@ -93,7 +93,8 @@
       margin: auto;
       top: 100%;
       right: 0;
-      background-color: var(--primary-color);
+      /* background-color: var(--primary-color); */
+      background-color: #1b1b1b;
     }
   
     .navbar-links a {

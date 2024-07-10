@@ -1,47 +1,38 @@
-/* eslint-disable react/prop-types */
+// import React from 'react'
 import "./ServicesPage.css";
-import home from "../../assets/images/mortgage-svgrepo-com.svg";
-import business from "../../assets/images/dollar-finance-money-20-svgrepo-com.svg";
-import mobile from "../../assets/images/mobile-dollar-svgrepo-com.svg";
-import translations from '../../translations.json';
-
-const ServicesPage = ({ language}) => {
+import automobile from "../../assets/images/sports-car-icon.svg";
+import creditcard from "../../assets/images/credit-card-swipe-icon.svg";
+import personal from "../../assets/images/sponsorship-icon.svg";
+import commercial from "../../assets/images/residential-apartments-icon.svg";
+import home from "../../assets/images/home-care-icon.svg";
+import hand from "../../assets/images/hand-money-income-dollar-icon.svg";
+const ServicesPage = () => {
   return (
-    <div className="services" id="services">
-      
-      <div className="about-heading">
-        <h1> {translations[language].our_services_heading}</h1>
-      </div>
-      <div className="services-content ">
-        <div className="card-container">
-          <div className="card">
-            <div className="front-content">
-              <img src={business} alt={translations[language].personal_loans_alt} />
-            </div>
-            <div className="content">
-              <p>{translations[language].personal_loans}</p>
-            </div>
-          </div>
+    <div className="ServicesPage">
+      <div className="card_container">
+        <div className="card">
+          <img src={automobile} alt="" />
+          <h1>AUTOMOBILE LOAN</h1>
         </div>
-        <div className="card-container">
-          <div className="card">
-            <div className="front-content">
-              <img src={mobile} alt={translations[language].automobile_loans_alt} />
-            </div>
-            <div className="content">
-              <p>{translations[language].automobile_loans}</p>
-            </div>
-          </div>
+        <div className="card">
+          <img src={creditcard} alt="" />
+          <h1 style={{ width: "max-content" }}>CREDIT CARD </h1>
         </div>
-        <div className="card-container">
-          <div className="card">
-            <div className="front-content">
-              <img src={home} alt={translations[language].home_finance_alt} />
-            </div>
-            <div className="content">
-              <p>{translations[language].home_finance}</p>
-            </div>
-          </div>
+        <div className="card">
+          <img src={personal} alt="" />
+          <h1>PERSONAL LOAN</h1>
+        </div>
+        <div className="card">
+          <img src={commercial} alt="" />
+          <h1>COMMERCIAL LOANS </h1>
+        </div>
+        <div className="card">
+          <img src={home} alt="" />
+          <h1>HOME FINANCE</h1>
+        </div>
+        <div className="card">
+          <img src={hand} alt="" />
+          <h1>BUSINESS LOANS </h1>
         </div>
       </div>
     </div>

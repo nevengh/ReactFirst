@@ -29,7 +29,8 @@
     font-weight: var(--normal-weight);
     width: 700px;
     line-height: 40px;
-    color: var(--dark-blue);
+    /* color: var(--dark-blue); */
+    color: #1b1b1b;
     margin-bottom: 20px;
 }
 .partner-text p span{

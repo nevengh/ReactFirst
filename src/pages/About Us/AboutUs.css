@@ -9,7 +9,8 @@
     font-weight: var(--bold-weight);
     text-align: left;
     margin-bottom: 2rem;
-    color: var(--dark-blue);
+    /* color: var(--dark-blue); */
+    color: #1b1b1b;
     border-bottom:10px solid var(--dark-yellow) ;
     width: 450px;
     padding-left: 150px;
@@ -29,7 +30,8 @@
     font-weight: var(--normal-weight);
     width: 700px;
     line-height: 40px;
-    color: var(--dark-blue);
+    /* color: var(--dark-blue); */
+    color: #1b1b1b;
     margin-bottom: 20px;
 }
 .about-img {

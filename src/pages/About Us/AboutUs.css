@@ -53,7 +53,7 @@
     .about-content .about-img img {
         width: 100%;
         height: 100%;
-        box-shadow: 0 4px 6px rgba(216, 92, 21, 0.834);
+        box-shadow: 0 4px 6px #1b1b1b;
         /* clip-path: polygon(35% 0, 100% 30%, 100% 70%, 35% 100%, 0 75%, 0 25%); */
         object-fit: cover;
         border-radius: 15px;
@@ -64,7 +64,7 @@
         font-weight: var(--normal-weight);
         width: 100%;
         line-height: 40px;
-        color: var(--dark-blue);
+        color: #1b1b1b;
         margin-bottom: 20px;
       }
 }

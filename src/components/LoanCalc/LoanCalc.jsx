@@ -1,13 +1,10 @@
-/* eslint-disable react/prop-types */
-
 import "./LoanCalc.css";
 import Home from "../../assets/images/mortgage-svgrepo-com.svg";
-import Money from "../../assets/images//dollar-finance-money-20-svgrepo-com.svg";
+import Money from "../../assets/images/dollar-finance-money-20-svgrepo-com.svg";
 import Car from "../../assets/images/mobile-dollar-svgrepo-com.svg";
 import Select from "react-select";
 import { useState } from "react";
 import translations from "../../translations.json";
-
 
 const LoanCalc = ({ language }) => {
   const [propertyValue, setPropertyValue] = useState(0);
@@ -84,7 +81,6 @@ const LoanCalc = ({ language }) => {
       case "home":
         return (
           <>
-           
             <h2 className="left_title">
               {translations[language].estimateYourMortgage}
             </h2>
@@ -222,19 +218,19 @@ const LoanCalc = ({ language }) => {
       <div className="LoanCalc-container main-container">
         <div className="LoanCalc_links_box">
           <div className="LoanCalc_links">
-            <a href="#" onClick={() => setSelectedLoanType("home")}>
+            <a href="#" onClick={(e) => { e.preventDefault(); setSelectedLoanType("home"); }}>
               <span>
                 <img src={Home} alt="Home Finance" />
               </span>
               {translations[language].homeFinance}
             </a>
-            <a href="#" onClick={() => setSelectedLoanType("personal")}>
+            <a href="#" onClick={(e) => { e.preventDefault(); setSelectedLoanType("personal"); }}>
               <span>
                 <img src={Money} alt="Personal Loan" />
               </span>
               {translations[language].personalLoan}
             </a>
-            <a href="#" onClick={() => setSelectedLoanType("automobile")}>
+            <a href="#" onClick={(e) => { e.preventDefault(); setSelectedLoanType("automobile"); }}>
               <span>
                 <img src={Car} alt="Automobile Loan" />
               </span>

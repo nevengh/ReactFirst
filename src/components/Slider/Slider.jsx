@@ -41,7 +41,7 @@ const SliderComponent = ({language}) => {
               </form>
             </div>
             <div className="slide-img">
-              <img src={slide.img} alt={translations[language].sliderImg} />
+              <img src={slide.img} alt={translations[language].sliderImg} className={`slide-img-${index + 1}`} />
             </div>
           </div>
         ))}

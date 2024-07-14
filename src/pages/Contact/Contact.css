@@ -3,7 +3,7 @@
 
 }
 .map-container iframe{
-    clip-path: polygon(35% 0, 100% 30%, 100% 70%, 55% 100%, 0 75%, 0 25%);
+    /* clip-path: polygon(35% 0, 100% 30%, 100% 70%, 55% 100%, 0 75%, 0 25%); */
     border-radius: 30px;
     filter: drop-shadow(0px 0px 5px #1b1b1b);
 
@@ -49,14 +49,14 @@
     font-family: var(--Montserrat-family);
     color: #fff;
     margin-bottom: 20px;
-    /* text-align: center; */
+    text-align: center;
 }
 .contact-form form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 70%;
-    /* margin : 0 auto; */
+    margin : 0 auto;
   }
   
   .contact-form input {
@@ -104,6 +104,9 @@
     }
   }
   @media (max-width:420px){
+    .contact-form h1{
+      font-size: 20px;
+    }
     
       .map-container iframe{
         width: 350px;

@@ -1,7 +1,7 @@
 import "./LoanCalc.css";
-import Home from "../../assets/images/mortgage-svgrepo-com.svg";
-import Money from "../../assets/images/dollar-finance-money-20-svgrepo-com.svg";
-import Car from "../../assets/images/mobile-dollar-svgrepo-com.svg";
+import Home from "../../assets/images/home-care-icon.svg";
+import automobile from "../../assets/images/sports-car-icon.svg";
+import personal from "../../assets/images/sponsorship-icon.svg";
 import Select from "react-select";
 import { useState } from "react";
 import translations from "../../translations.json";
@@ -226,13 +226,13 @@ const LoanCalc = ({ language }) => {
             </a>
             <a href="#" onClick={(e) => { e.preventDefault(); setSelectedLoanType("personal"); }}>
               <span>
-                <img src={Money} alt="Personal Loan" />
+                <img src={personal} alt="Personal Loan" />
               </span>
               {translations[language].personalLoan}
             </a>
             <a href="#" onClick={(e) => { e.preventDefault(); setSelectedLoanType("automobile"); }}>
               <span>
-                <img src={Car} alt="Automobile Loan" />
+                <img src={automobile} alt="Automobile Loan" />
               </span>
               {translations[language].automobileLoans}
             </a>

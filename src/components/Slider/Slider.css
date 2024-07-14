@@ -84,6 +84,7 @@
     background-color: var(--dark-blue);
     color: var(--dark-yellow);
   }
+ 
 
 
   @media(max-width:767px){
@@ -96,6 +97,10 @@
       width: 350px;
       height: auto;
     }
+    .slide-img-2{
+      margin-top: 40px;
+    }
+    
     .slide-con{
       display: flex !important;
       justify-content: center !important;

@@ -41,8 +41,7 @@
 .about-content .about-img img{
     width: 400px;
     height: 400px;
-    /* box-shadow: 0 4px 6px rgba(216, 92, 21, 0.834); */
-    /* clip-path: polygon(55% 0, 100% 30%, 100% 70%, 35% 100%, 0 75%, 0 25%); */
+    box-shadow: 0 4px 6px #1b1b1b;
     object-fit: cover;
     border-radius: 15px;
     
@@ -51,8 +50,8 @@
 
 @media (max-width:767px){
     .about-content .about-img img {
-        width: 100%;
-        height: 100%;
+        width: 350px;
+        height: 350px;
         box-shadow: 0 4px 6px #1b1b1b;
         /* clip-path: polygon(35% 0, 100% 30%, 100% 70%, 35% 100%, 0 75%, 0 25%); */
         object-fit: cover;
@@ -66,5 +65,7 @@
         line-height: 40px;
         color: #1b1b1b;
         margin-bottom: 20px;
+        margin: 0 auto;
+        text-align: center;
       }
 }

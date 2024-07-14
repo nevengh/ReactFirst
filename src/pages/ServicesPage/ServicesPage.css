@@ -22,10 +22,10 @@
   position: relative;
   z-index: 88;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: 80px;
 }
 .card_container .card {
   width: 350px;
@@ -34,7 +34,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.893);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.893); */
   padding: 2rem;
   gap: 30px;
 }

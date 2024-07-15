@@ -21,7 +21,7 @@ const Contact = ({ language }) => {
         (response) => {
           console.log(response);
           alert("Email sent successfully");
-          // Clear the form fields
+          
           e.target.reset();
         },
         (error) => {
@@ -48,16 +48,19 @@ const Contact = ({ language }) => {
               type="text"
               placeholder={translations[language].name}
               name="user_name"
+              required
             />
             <input
               type="email"
               placeholder={translations[language].Email}
               name="email"
+              required
             />
             <input
               type="tel"
               placeholder={translations[language].PhoneNumber}
               name="phone"
+              required
             />
             <button type="submit">{translations[language].applyHere}</button>
           </form>

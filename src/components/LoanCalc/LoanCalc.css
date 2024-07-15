@@ -34,10 +34,7 @@
 .LoanCalc_links_box {
   width: 260px;
   height: 527px;
-  /* padding: 48px 24px; */
-  /* background-color: var(--dark-blue); */
   background-color: #1b1b1b;
-
   border: none;
   border-radius: 25px;
   box-shadow: 0px 0px 5px var(--dark-blue);
@@ -107,6 +104,7 @@
   font-weight: var(--bold-weight);
   margin-bottom: 50px;
   font-size: 30px;
+  line-height: 40px;
 }
 
 .left_text {
@@ -270,32 +268,35 @@
 @media (max-width: 992px) {
   .LoanCalc_links_box .LoanCalc_links {
     display: flex;
-    flex-direction: row;
+    flex-direction: row ;
     align-items: center;
     justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    /* width: 100%; */
+
+  }
+  .LoanCalc-container{
     gap: 30px;
   }
   .LoanCalc_content_box-left{
     border: none;
   }
   .LoanCalc_links_box {
-    width: 260px;
-    height: 527px;
-    /* padding: 48px 24px; */
-    /* background-color: var(--dark-blue); */
+    width: 100% !important;
+    height: 100% !important;
     background-color: #1b1b1b;
-    
     border-radius: 25px;
     box-shadow: 0px 0px 5px #1b1b1b;
     position: relative;
   }
   .LoanCalc_content_box {
-    justify-content: start;
+    justify-content: center;
     gap:30px;
   }
   .LoanCalc_content_box-right{
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 80px;
@@ -306,7 +307,7 @@
 @media (max-width: 540px) {
   .LoanCalc_content_box-left form {
     flex-direction: column;
-    align-items: start;
+    align-items: center;
   }
 
   .LoanCalc_content_box-right{
@@ -315,15 +316,21 @@
 
   .left_text {
     max-width: 280px;
+    margin: 30px auto;
   }
 
   .left_title {
     font-size: 24px;
-    max-width: 300px;
+    max-width: max-content;
+    margin: 50px auto;
   }
 
   .estimate-button {
     width: 280px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .LoanCalc_content_box-left {

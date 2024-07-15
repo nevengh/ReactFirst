@@ -3,16 +3,24 @@
 import "./Footer.css";
 import logo from '../../assets/images/Alhosn svg.svg'
 import translations from '../../translations.json';
-import location from '../../assets/images/icons8-location-24.png'
-import phone from '../../assets/images/icons8-phone-24.png'
-import mail from '../../assets/images/icons8-envelope-24.png'
+import location from '../../assets/images/reshot-icon-location-marker-ZE5Y87KGQF.svg'
+import phone from '../../assets/images/reshot-icon-phone-JVL4M2KR87.svg'
+import mail from '../../assets/images/reshot-icon-mail-AV23TSMFWZ.svg'
+import { useState } from "react";
 const Footer = ({language}) => {
+  const [email, setEmail] = useState('');
+
+  const handleSubscribe = () => {
+    // Here you can add your subscribe logic
+    console.log('Subscribed with email:', email);
+    setEmail(''); // Clear the input field
+  };
   return (
     <div className="footer">
       <div className="footer-container">
         <div className="logo">
           <img src={logo} alt="" />
-          <p><span>ALHOSN</span> FINANCE BROKER</p>
+          <p><span>ALHOSN</span> FINANCIAL BROKER</p>
         </div>
         <div className="footer-links">
           <a href="#home">{translations[language].home}</a>
@@ -33,23 +41,26 @@ const Footer = ({language}) => {
                 placeholder="Enter Your Email"
                 // eslint-disable-next-line react/no-unknown-property
                 autocomplete="off"
+                value={email}
+              onChange={(e) => setEmail(e.target.value)}
               />
               <input
                 className="button--submit"
                 value="Subscribe"
-                type="submit"
+                type="button"
+                onClick={handleSubscribe}
               />
             </div>
           </div>
           <div className="info">
             <p className="address">
-              <span><img src={location} alt="" /> </span>{translations[language].contact_heading_h1}
+              <span><img src={location} alt="Location icon" /> </span>{translations[language].contact_heading_h1}
             </p>
             <p className="address">
-              <span><img src={phone} alt="" /> </span>+0509347099
+              <span><img src={phone} alt="Phone icon" className="phone_icon" /> </span>+0509347099
             </p>
             <p className="address">
-              <span><img src={mail} alt="" /> </span>info@alhosnfb.com 
+              <span><img src={mail} alt="email icon" /> </span>info@alhosnfb.com 
             </p>
           </div>
           <div className="social-icon">

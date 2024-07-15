@@ -1,16 +1,17 @@
 {
     "en": {
-      "PageName":" Finance Broker",
+      "emailSentSuccess":"Successfully sent",
+      "PageName":" Financial Broker",
       "spanPageName":"ALHOSN",
       "loanCalculator": "LOAN CALCULATOR",
       "homeFinance": "HOME FINANCE",
       "personalLoan": "PERSONAL LOAN",
-      "automobileLoans": "AUTOMOBILE LOANS",
+      "automobileLoans": "AUTOMOBILE LOAN",
       "propertyValue": "Property Value",
       "financeAmount": "Finance Amount",
       "tenorInYears": "Tenor In Years",
       "estimateMortgage": "ESTIMATE MY MORTGAGE",
-      "estimateYourMortgage": "ESTIMATE Your MORTGAGE",
+      "estimateYourMortgage": "Estimate Your Mortage",
       "estimateYourPersonal": "Estimate your personal loan",
       "estimateYourAutomobile": "Estimate your automobile loan",
       "estimateLoan": "ESTIMATE MY LOAN",
@@ -62,6 +63,7 @@
     
     },
     "ar": {
+      "emailSentSuccess":"تم الارسال بنجاح",
       "PageName":" لوساطة التمويل",
       "spanPageName":"الحصن",
       "loanCalculator": "حاسبة القروض",

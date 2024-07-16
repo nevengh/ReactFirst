@@ -302,6 +302,11 @@
     gap: 80px;
 
   }
+  .LoanCalc h1::before {
+    
+    left: 39%;
+    
+  }
 }
 
 @media (max-width: 540px) {
@@ -312,6 +317,11 @@
 
   .LoanCalc_content_box-right{
     gap: 20px;
+  }
+  .LoanCalc h1::before {
+    
+    left: 30%;
+    
   }
 
   .left_text {

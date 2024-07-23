@@ -6,15 +6,37 @@ import translations from '../../translations.json';
 import location from '../../assets/images/reshot-icon-location-marker-ZE5Y87KGQF.svg'
 import phone from '../../assets/images/reshot-icon-phone-JVL4M2KR87.svg'
 import mail from '../../assets/images/reshot-icon-mail-AV23TSMFWZ.svg'
-import { useState } from "react";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 const Footer = ({language}) => {
-  const [email, setEmail] = useState('');
+  
 
-  const handleSubscribe = () => {
-    // Here you can add your subscribe logic
-    console.log('Subscribed with email:', email);
-    setEmail(''); // Clear the input field
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_1n0hcmo",
+        "template_0gmroi6",
+        form.current,
+        "Dhw_22hh8etdn_F7B"
+      )
+      .then(
+        (response) => {
+          console.log(response);
+          alert("Email sent successfully");
+          
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error);
+          alert("Something went wrong");
+        }
+      );
   };
+
+  
   return (
     <div className="footer">
       <div className="footer-container">
@@ -31,25 +53,26 @@ const Footer = ({language}) => {
         </div>
         <div className="social">
           <div className="newsletter">
-            <h1>Subscribe to our newsletter</h1>
+            <h1>{translations[language].SubscribeNewsletter}</h1>
             <div className="input-group">
+              <form ref={form} onSubmit={sendEmail}>
               <input
                 type="email"
                 className="input"
                 id="Email"
-                name="Email"
+                name="email"
                 placeholder="Enter Your Email"
                 // eslint-disable-next-line react/no-unknown-property
                 autocomplete="off"
-                value={email}
-              onChange={(e) => setEmail(e.target.value)}
+                
               />
               <input
                 className="button--submit"
                 value="Subscribe"
-                type="button"
-                onClick={handleSubscribe}
+                type="submit"
+                
               />
+              </form>
             </div>
           </div>
           <div className="info">
@@ -81,7 +104,7 @@ const Footer = ({language}) => {
         </div>
       </div>
       <div className="copywriter">
-        <p>© Copyright 2024 - All rights reserved ro Alhosn Financial Broker</p>
+        <p>© Copyright 2024 - All rights reserved to Alhosn Financial Broker</p>
       </div>
     </div>
   );

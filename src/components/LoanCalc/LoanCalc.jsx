@@ -243,7 +243,7 @@ const LoanCalc = ({ language }) => {
                 <li>
                   {translations[language].downPayment}
                   <span>
-                    {translations[language].Aed} {results.downPayment}
+                    {translations[language].Aed}  {results.downPayment}
                   </span>
                 </li>
                 <li>

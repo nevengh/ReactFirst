@@ -127,7 +127,12 @@
     display: flex;
     align-items: center;
   }
-  
+  .newsletter form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
   .newsletter .input {
     min-height: 70px;
     width: 100%;

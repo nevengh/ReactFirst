@@ -1,5 +1,6 @@
 {
     "en": {
+      "SubscribeNewsletter":"Subscribe to our newsletter",
       "emailSentSuccess":"Successfully sent",
       "PageName":" Financial Broker",
       "spanPageName":"ALHOSN",
@@ -79,9 +80,9 @@
       "estimateYourAutomobile":"تقدير قرض السيارة",
       "estimateLoan": "تقدير القرض الخاص بي",
       "unlockMortgage": "افتح الباب أمام منزل أحلامك من خلال حلول تمويلات الرهن العقاري المخصصة لدينا. نحن هنا لنجعل رحلة ملكية منزلك سلسة ومجزية. ثق في خبرتنا وخدماتنا الشخصية ونحن نرشدك نحو مفتاح مستقبلك. يرجى ملاحظة أن الأسعار قد تتقلب اعتمادًا على البنك المحدد وسياساته. تطبق الشروط والأحكام.",
-      
+      "SubscribeNewsletter":"اشترك في النشرةالاخبارية",
       "result": "النتيجة",
-      "downPayment": "دفعة أولى",
+      "downPayment": "دفعة أولى  ",
       "numberOfPayments": "عدد الدفعات",
       "monthlyPayment": "الدفع الشهري",
       "applyHere": "قدم هنا",

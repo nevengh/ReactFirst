@@ -60,7 +60,7 @@ function App() {
     switch(currentSection) {
       case 'home':
         return {
-          title: "ALHOSN FINANCING BROKER",
+          title: "ALHOSN FINANCIAL BROKER",
           description: "Your trusted financial partner in UAE",
           keywords: "financing, broker, ALHOSN, financial services, UAE",
           url: "https://steady-florentine-5ba0c9.netlify.app",
@@ -131,7 +131,7 @@ function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta http-equiv="content-language" content={language === 'ar' ? 'ar' : 'en'} />
         <meta name="robots" content="index, follow" />
-        <link rel="icon" href="https://steady-florentine-5ba0c9.netlify.app/favicon.ico" type="image/x-icon" />
+        
         <html lang={language} />
       </Helmet>
       

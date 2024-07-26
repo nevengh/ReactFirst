@@ -24,7 +24,7 @@ const ServicesPage = () => {
         </div>
         <div className="card">
           <img src={commercial} alt="" />
-          <h1>COMMERCIAL LOANS </h1>
+          <h1>COMMERCIAL LOAN </h1>
         </div>
         <div className="card">
           <img src={home} alt="" />
@@ -32,7 +32,7 @@ const ServicesPage = () => {
         </div>
         <div className="card">
           <img src={hand} alt="" />
-          <h1>BUSINESS LOANS </h1>
+          <h1>BUSINESS LOAN </h1>
         </div>
       </div>
     </div>

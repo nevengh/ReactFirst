@@ -19,34 +19,44 @@ const LoanCalc = ({ language }) => {
     financeAmount: 0,
     tenor: 0,
   });
+  const [interestRate, setInterestRate] = useState(0.05); // Add interest rate state
 
   const handlePropertyValueChange = (e) =>
     setPropertyValue(Number(e.target.value));
   const handleFinanceAmountChange = (e) =>
     setFinanceAmount(Number(e.target.value));
   const handleTenorChange = (selectedOption) => setTenor(selectedOption.value);
+  const handleInterestRateChange = (e) =>
+    setInterestRate(Number(e.target.value)); // Add handler for interest rate change
+
+  const pmt = (rate, nper, pv) => {
+    if (rate === 0) return -pv / nper;
+    const pvif = Math.pow(1 + rate, nper);
+    const pmt = rate / (pvif - 1) * -(pv * pvif);
+    return pmt;
+  };
 
   const calculateResults = () => {
-    let downPayment, numberOfPayments, monthlyPayment, resultAmount;
+    let downPayment, numberOfPayments, monthlyPayment;
+
+    const monthlyRate = ((1 + interestRate) ** (1 / 12)) - 1; // Calculate the monthly rate
 
     switch (selectedLoanType) {
       case "home":
         downPayment = financeAmount * 0.2;
         numberOfPayments = tenor * 12;
-        monthlyPayment = (financeAmount - downPayment) / numberOfPayments;
+        monthlyPayment = pmt(monthlyRate, numberOfPayments, -(propertyValue - downPayment));
         break;
 
       case "personal":
         numberOfPayments = tenor * 12;
-        resultAmount = financeAmount + financeAmount * 0.12;
-        monthlyPayment = resultAmount / numberOfPayments;
+        monthlyPayment = pmt(monthlyRate, numberOfPayments, -financeAmount);
         downPayment = 0; // No down payment for personal loans
         break;
 
       case "automobile":
         numberOfPayments = tenor * 12;
-        resultAmount = financeAmount + financeAmount * 0.5;
-        monthlyPayment = resultAmount / numberOfPayments;
+        monthlyPayment = pmt(monthlyRate, numberOfPayments, -financeAmount);
         downPayment = 0; // No down payment for automobile loans
         break;
 
@@ -62,6 +72,7 @@ const LoanCalc = ({ language }) => {
       tenor: tenor,
     });
   };
+
   const HomeTenors = [
     { value: 1, label: "1" },
     { value: 2, label: "2" },
@@ -88,14 +99,13 @@ const LoanCalc = ({ language }) => {
     { value: 23, label: "23" },
     { value: 24, label: "24" },
     { value: 25, label: "25" },
-  ]
+  ];
   const tenors = [
     { value: 1, label: "1" },
     { value: 2, label: "2" },
     { value: 3, label: "3" },
     { value: 4, label: "4" },
     { value: 5, label: "5" },
-    
   ];
 
   const renderLoanCalcContent = () => {
@@ -137,10 +147,26 @@ const LoanCalc = ({ language }) => {
                 </label>
                 <Select
                   options={HomeTenors}
-                  defaultValue={tenors.find((option) => option.value === 25)}
+                  defaultValue={HomeTenors.find(
+                    (option) => option.value === 25
+                  )}
                   onChange={handleTenorChange}
                 />
               </div>
+
+              <label className="slider-label">
+                {translations[language].interestRate}
+                <input
+                  type="range"
+                  min="0.01"
+                  max="0.1"
+                  step="0.01"
+                  value={interestRate}
+                  onChange={handleInterestRateChange}
+                  className="range"
+                />
+                <span className="rate_value">{(interestRate * 100).toFixed(2)}%</span>
+              </label>
             </form>
             <button className="estimate-button" onClick={calculateResults}>
               {translations[language].estimateMortgage}
@@ -176,10 +202,24 @@ const LoanCalc = ({ language }) => {
                 </label>
                 <Select
                   options={tenors}
-                  defaultValue={tenors.find((option) => option.value === 25)}
+                  defaultValue={tenors.find((option) => option.value === 5)}
                   onChange={handleTenorChange}
                 />
               </div>
+
+              <label className="slider-label">
+                {translations[language].interestRate}
+                <input
+                  type="range"
+                  min="0.01"
+                  max="0.1"
+                  step="0.01"
+                  value={interestRate}
+                  onChange={handleInterestRateChange}
+                  className="range"
+                />
+                <span className="rate_value">{(interestRate * 100).toFixed(2)}%</span>
+              </label>
             </form>
             <button className="estimate-button" onClick={calculateResults}>
               {translations[language].estimateLoan}
@@ -215,10 +255,24 @@ const LoanCalc = ({ language }) => {
                 </label>
                 <Select
                   options={tenors}
-                  defaultValue={tenors.find((option) => option.value === 25)}
+                  defaultValue={tenors.find((option) => option.value === 5)}
                   onChange={handleTenorChange}
                 />
               </div>
+
+              <label className="slider-label">
+                {translations[language].interestRate}
+                <input
+                  type="range"
+                  min="0.01"
+                  max="0.1"
+                  step="0.01"
+                  value={interestRate}
+                  onChange={handleInterestRateChange}
+                  className="range"
+                />
+                <span className="rate_value">{(interestRate * 100).toFixed(2)}%</span>
+              </label>
             </form>
             <button className="estimate-button" onClick={calculateResults}>
               {translations[language].estimateLoan}
@@ -240,19 +294,37 @@ const LoanCalc = ({ language }) => {
       <div className="LoanCalc-container main-container">
         <div className="LoanCalc_links_box">
           <div className="LoanCalc_links">
-            <a href="#" onClick={(e) => { e.preventDefault(); setSelectedLoanType("home"); }}>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setSelectedLoanType("home");
+              }}
+            >
               <span>
                 <img src={Home} alt="Home Finance" />
               </span>
               {translations[language].homeFinance}
             </a>
-            <a href="#" onClick={(e) => { e.preventDefault(); setSelectedLoanType("personal"); }}>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setSelectedLoanType("personal");
+              }}
+            >
               <span>
                 <img src={personal} alt="Personal Loan" />
               </span>
               {translations[language].personalLoan}
             </a>
-            <a href="#" onClick={(e) => { e.preventDefault(); setSelectedLoanType("automobile"); }}>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setSelectedLoanType("automobile");
+              }}
+            >
               <span>
                 <img src={automobile} alt="Automobile Loan" />
               </span>
@@ -271,7 +343,7 @@ const LoanCalc = ({ language }) => {
                 <li>
                   {translations[language].downPayment}
                   <span>
-                    {translations[language].Aed}  {results.downPayment}
+                    {translations[language].Aed} {results.downPayment}
                   </span>
                 </li>
                 <li>

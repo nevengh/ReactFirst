@@ -154,8 +154,11 @@ const LoanCalc = ({ language }) => {
                 />
               </div>
 
+              <div className="input_group">
               <label className="slider-label">
                 {translations[language].interestRate}
+                </label>
+                <div className="range_row">
                 <input
                   type="range"
                   min="0.01"
@@ -166,7 +169,8 @@ const LoanCalc = ({ language }) => {
                   className="range"
                 />
                 <span className="rate_value">{(interestRate * 100).toFixed(2)}%</span>
-              </label>
+                </div>
+              </div>
             </form>
             <button className="estimate-button" onClick={calculateResults}>
               {translations[language].estimateMortgage}
@@ -207,8 +211,11 @@ const LoanCalc = ({ language }) => {
                 />
               </div>
 
+              <div className="input_group">
               <label className="slider-label">
                 {translations[language].interestRate}
+                </label>
+                <div className="range_row">
                 <input
                   type="range"
                   min="0.01"
@@ -219,7 +226,8 @@ const LoanCalc = ({ language }) => {
                   className="range"
                 />
                 <span className="rate_value">{(interestRate * 100).toFixed(2)}%</span>
-              </label>
+                </div>
+              </div>
             </form>
             <button className="estimate-button" onClick={calculateResults}>
               {translations[language].estimateLoan}
@@ -260,8 +268,11 @@ const LoanCalc = ({ language }) => {
                 />
               </div>
 
+              <div className="input_group">
               <label className="slider-label">
                 {translations[language].interestRate}
+                </label>
+                <div className="range_row">
                 <input
                   type="range"
                   min="0.01"
@@ -272,7 +283,8 @@ const LoanCalc = ({ language }) => {
                   className="range"
                 />
                 <span className="rate_value">{(interestRate * 100).toFixed(2)}%</span>
-              </label>
+                </div>
+              </div>
             </form>
             <button className="estimate-button" onClick={calculateResults}>
               {translations[language].estimateLoan}

@@ -151,12 +151,15 @@
   align-items: center;
   
 }
-.range{
-  margin-top: 40px;
+.range_row{
+  display: flex;
+  align-items: center;
+  /* margin-top: 40px; */
 }
 .rate_value{
   color: #b7b7b7;
   margin-left: 15px;
+ 
 
 }
 .slider_label .volume {

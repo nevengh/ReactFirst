@@ -80,7 +80,7 @@ const Footer = ({language}) => {
               <span><img src={location} alt="Location icon" /> </span>{translations[language].contact_heading_h1}
             </p>
             <p className="address">
-              <span><img src={phone} alt="Phone icon" className="phone_icon" /> </span>+971509347075
+              <span><img src={phone} alt="Phone icon" className="phone_icon" /> </span>+971509347099
             </p>
             <p className="address">
               <span><img src={mail} alt="email icon" /> </span>info@alhosnfb.com 
@@ -93,7 +93,7 @@ const Footer = ({language}) => {
             <a href="https://www.instagram.com/iam_alhosn/">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="instagram"><g fill="none" stroke="#e6cd89" ><rect width="21" height="21" x="1.5" y="1.5" rx="5.48" ry="5.48"></rect><circle cx="12" cy="12" r="5.5"></circle><circle cx="18" cy="5" r=".5"></circle></g></svg>
             </a>
-            <a href="https://api.whatsapp.com/send?phone=%2B971509347075&context=ARC4t2Fc1khCEiyrbjM5uDILdCwXnVCrbdmPPIN-3Po9Rx6PWpDA9sVIKDAyqpXAnlOqTLFGUPb9HYFTYlxzgWYL6GjJ8HyezQNCWF4cQXHsCWiAkPq4KHYswUYFDeArYMHCZEyulJYiF9ZzARaEkZefQg&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwZXh0bgNhZW0CMTAAAR06aCIR55z4LQZ2yf7EFAskaq2cR7we1Y20MJuun6wT4xWJx3xu0WdwAD8_aem_uMB0oXQThDIue46vuhMQ2g">
+            <a href="https://wa.me/message/RVTY6QENQFOML1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="whatsapp"><g fill="none" stroke="#e6cd89"><path d="M12 .5a11.5 11.5 0 0 0-9.54 17.92L.5 23.5l5.23-1.87A11.5 11.5 0 1 0 12 .5Z"></path><path d="M9.5 14.5c1.3 1.3 4.17 3 5.5 3a2.53 2.53 0 0 0 2.5-2v-1s-1.23-.6-2-1-2 1-2 1A6.52 6.52 0 0 1 11 13a6.52 6.52 0 0 1-1.5-2.5s1.4-1.23 1-2-1-2-1-2h-1a2.53 2.53 0 0 0-2 2.5c0 1.33 1.7 4.2 3 5.5Z"></path></g></svg>
             </a>
             <a href="https://www.linkedin.com/company/hosn-financial-broker/">
